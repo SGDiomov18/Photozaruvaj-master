@@ -2,9 +2,24 @@ body{
     background-color: #141414;
     margin: 0px;
     overflow: hidden;
-    background-image: radial-gradient(rgba(65, 65, 65, 0.18) 3%, transparent 0);
-    background-size: 40px 40px;
 
+}
+.BackgroundImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter:blur(10px);
+    opacity: 0.8;
+    animation: BackgroundImageAnimation 2s ease forwards;
+}
+
+@keyframes BackgroundImageAnimation {
+    from{
+        transform: scale(2);
+    }
+    to{
+        transform: scale(1);
+    }
 }
 .topHr{
     position: absolute;
@@ -19,121 +34,116 @@ body{
     justify-content: center;
     margin: auto;
     background-color: #333333;
-    border-radius: 200px;
-    opacity: 0.3;
+    border-radius: 100px;
+    opacity: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
     transform: translateY(120px) ;
+    animation: BigCardAnimation 1.5s ease forwards;
+    animation-delay: 0.1s;
+    z-index: 0;
 
+}
+@keyframes BigCardAnimation {
+    from{
+        pacity: 0;
+        transform: translateY(240px) ;
+    }
+    to{
+        opacity: 0.3;
+        transform: translateY(120px) ;
+    }
+
+
+}
+.overlay{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    transform: translateX(105px) translateY(-20px);
+    z-index: 1;
+    background-color: #333333;
+    animation: OverlayAppearence 1s ease forwards;
+
+}
+
+@keyframes OverlayAppearence {
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.3;
+    }
+
+}
+
+.registerImage{
+
+    position: absolute;
+    height: 190px;
+    width: 194px;
+    border-radius: 100px;
+    transform: translateX(0px) translateY(10px);
+    opacity: 1;
+    z-index: 2;
+
+}
+
+.HeadingDivRelative{
+    height: 600px;
+    width: 400px;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    border-radius: 100px;
+    transform: translateY(-400px) ;
+    animation: HeadingDivRelativeAnimation 1.2s ease forwards;
+
+}
+
+@keyframes HeadingDivRelativeAnimation {
+    from {
+        pacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-400px);
+    }
 }
 .headingDiv{
     position: absolute;
     height: 50px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     justify-content: center;
     background-color: #141414;
     border-radius: 100px;
-    transform: translateY(50px) translateX(100px);
-    opacity: 0.2;
+    transform: translateX(80px);
+    opacity: 0.7;
     box-shadow: 0px 3px black;
 }
 .Heading{
-    font-size: 40px;
-    font-family: Consolas;
-    transform: translateY(-25px);
-    color: #ffffff;
-
-}
-.smallCard{
-    height: 50px;
-    width: 250px;
-    justify-content: center;
-    margin: auto;
-    transform: translateY(200px);
-
-}
-
-.input1{
-    height: 50px;
-    width: 250px;
-    border-radius: 50px;
-    text-align: center;
-    transform: translateY(-20px);
-    background-color: #141414;
-    opacity: 0.5;
-    box-shadow: 0px 3px black;
-    color: white;
-    font-size: 15px;
-    font-family: Consolas;
-}
-.input2{
-    height: 50px;
-    width: 250px;
-    border-radius: 50px;
-    text-align: center;
-    background-color: #141414;
-    opacity: 0.5;
-    box-shadow: 0px 3px black;
-    color: white;
-    font-size: 15px;
-    font-family: Consolas;
-}
-video{
-
-    opacity: 0.7;
-    width: 100%;
-    position: absolute;
-    pointer-events: none;
-    z-index: -2;
-    animation: VideoAnimation 3s forwards;
-    animation-delay: 3.5s;
-
 
 
 }
-
-
-.Submit{
-    height: 40px;
-    width: 100px;
-    border-radius: 50px;
-    opacity: 0.7;
-    justify-content: center;
-    margin: auto;
-    transform: translateX(80px) translateY(50px);
-    font-family: Consolas;
-
-}
-.Submit:hover{
-    transform: translateX(80px) translateY(50px) scale(1.05);
-    background-color: #a166ff;
-}
-
-@keyframes VideoAnimation {
-    from{
-        opacity: 0.7;
-        filter:blur(0px);
-
-
-
-    }
-    to{
-        opacity: 0.3;
-        filter:blur(8px);
-
-    }
-
-}
-
 
 .HrefRegister{
-    font-size: 25px;
+
     text-decoration: none;
     position: absolute;
-    transform: translateX(65px) translateY(0px);
-    color: #cbcbcb;
+    transform: translateX(65px) translateY(0px) translateY(-25px);
     font-family: Consolas;
     opacity: 0.4;
+    font-size: 40px;
+    color: #ffffff;
 
 }
 
@@ -164,3 +174,133 @@ video{
 
 
 }
+.smallCard{
+    height: 50px;
+    width: 250px;
+    justify-content: center;
+    margin: auto;
+    transform: translateY(200px);
+
+}
+
+.input1{
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #141414;
+    opacity: 0;
+    box-shadow: 0px 3px black;
+    color: white;
+    font-size: 15px;
+    font-family: Consolas;
+    transform: translateY(-20px);
+    animation: AppearencePlaceholders1 0.8s ease forwards;
+    animation-delay: 0.5s;
+}
+.input2{
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #141414;
+    opacity: 0;
+    box-shadow: 0px 3px black;
+    color: white;
+    font-size: 15px;
+    font-family: Consolas;
+    animation: AppearencePlaceholders2 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.Submit{
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    opacity: 0;
+    justify-content: center;
+    margin: auto;
+    transform: translateX(80px) translateY(40px);
+    font-family: Consolas;
+    animation: AppearenceSubmit 0.8s ease forwards;
+    animation-delay: 1.2s;
+
+}
+
+
+
+@keyframes AppearencePlaceholders1 {
+
+    from{
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+    to{
+        opacity: 0.5;
+        transform: translateY(-20px);
+    }
+}
+@keyframes AppearencePlaceholders2 {
+
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 0.5;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes AppearenceSubmit{
+
+    from{
+        opacity: 0;
+        transform: translateX(80px) translateY(-40px);
+    }
+    to{
+        opacity: 0.7;
+        transform: translateX(80px) translateY(40px);
+    }
+}
+
+.backImage{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    opacity: 0;
+    top:110px;
+    transform: translateX(9px);
+    animation: backImageMainAnimation 1s ease forwards;
+    animation-delay: 1.4s;
+
+}
+
+.backImage:hover{
+    animation: backImageAnimation 1s ease forwards;
+    transform: translateX(9px);
+}
+@keyframes backImageAnimation {
+    from{
+        opacity: 0.03;
+        transform: translateX(9px);
+    }
+    to{
+        opacity: 0.5;
+        transform: translateX(9px);
+    }
+}
+
+@keyframes backImageMainAnimation {
+    from{
+        opacity: 0;
+        transform: translateX(9px) translateY(-100px);
+    }
+    to{
+        opacity: 0.03;
+        transform: translateX(9px) translateY(0px);
+
+    }
+}
+
+
