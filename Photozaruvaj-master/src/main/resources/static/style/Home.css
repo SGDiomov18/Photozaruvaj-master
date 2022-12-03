@@ -14,7 +14,25 @@ body{
     align-items: center;
     justify-content: center;
 }
+.BackgroundImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter:blur(10px);
+    opacity: 0.3;
+    animation: BackgroundImageAnimation 2s ease forwards;
+}
 
+
+
+@keyframes BackgroundImageAnimation {
+    from{
+        transform: scale(2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
 .HomeHeading{
     position: absolute;
     margin: auto;
@@ -251,7 +269,7 @@ input{
     grid-template-columns: 250px 250px 250px 250px;
     justify-content: center;
     opacity: 0;
-    transform: translateY(-200px) scale(0.7);
+    transform: translateY(0px) scale(0.7);
     animation: CardAppearence 1.5s ease forwards;
 }
 
@@ -262,7 +280,7 @@ input{
     width: 250px;
     background-color: rgba(255,255,255, 0.02);
     border: 1px solid rgba(255,255,255, 0.05);
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
     position: relative;
     text-align: center;

@@ -191,12 +191,13 @@ body{
     background-color: #141414;
     opacity: 0;
     box-shadow: 0px 3px black;
-    color: white;
-    font-size: 15px;
+    color: rgba(255, 255, 255, 0.51);
+    font-size: 17px;
     font-family: Consolas;
     transform: translateY(-20px);
     animation: AppearencePlaceholders1 0.8s ease forwards;
     animation-delay: 0.5s;
+
 }
 .input2{
     height: 50px;
@@ -206,11 +207,11 @@ body{
     background-color: #141414;
     opacity: 0;
     box-shadow: 0px 3px black;
-    color: white;
-    font-size: 15px;
+    color: rgba(255, 255, 255, 0.51);
+    font-size: 17px;
     font-family: Consolas;
-    animation: AppearencePlaceholders2 0.8s ease forwards;
-    animation-delay: 0.8s;
+    animation: AppearencePlaceholders2 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .Submit{
@@ -220,43 +221,35 @@ body{
     opacity: 0;
     justify-content: center;
     margin: auto;
-    transform: translateX(80px) translateY(40px);
+    transform: translateX(-30px) translateY(40px);
     font-family: Consolas;
-    animation: AppearenceSubmit 0.8s ease forwards;
-    animation-delay: 1.2s;
+    animation: AppearenceSubmit 1s ease forwards;
+    animation-delay: 0.8s;
 
 }
 
+.HrefLink{
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    opacity: 0;
+    justify-content: center;
+    margin: auto;
 
-
-@keyframes AppearencePlaceholders1 {
-
-    from{
-        opacity: 0;
-        transform: translateY(-120px);
-    }
-    to{
-        opacity: 0.5;
-        transform: translateY(-20px);
-    }
-}
-@keyframes AppearencePlaceholders2 {
-
-    from{
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    to{
-        opacity: 0.5;
-        transform: translateY(0px);
-    }
+    font-family: Consolas;
+    animation: AppearenceHref 0.8s ease forwards;
+    animation-delay: 0.8s;
+    text-decoration: none;
 }
 
-@keyframes AppearenceSubmit{
-
+.HrefButton{
+    text-decoration: none;
+    color: #0f0f0d;
+}
+@keyframes AppearenceHref{
     from{
         opacity: 0;
-        transform: translateX(80px) translateY(-40px);
+        transform: translateX(150px) translateY(40px);
     }
     to{
         opacity: 0.7;
@@ -264,6 +257,40 @@ body{
     }
 }
 
+@keyframes AppearencePlaceholders1 {
+
+    from{
+        opacity: 0;
+        transform: translateY(-20px) translateX(100px);
+    }
+    to{
+        opacity: 0.5;
+        transform: translateY(-20px) translateX(0px);
+    }
+}
+@keyframes AppearencePlaceholders2 {
+
+    from{
+        opacity: 0;
+        transform: translateY(0px) translateX(-100px);;
+    }
+    to{
+        opacity: 0.5;
+        transform: translateY(0px) translateX(0px);;
+    }
+}
+
+@keyframes AppearenceSubmit{
+
+    from{
+        opacity: 0;
+        transform: translateX(80px) translateY(80px);
+    }
+    to{
+        opacity: 0.7;
+        transform: translateX(80px) translateY(40px);
+    }
+}
 .backImage{
     height: 30px;
     width: 30px;
