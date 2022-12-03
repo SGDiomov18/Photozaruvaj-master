@@ -1,0 +1,228 @@
+body{
+    background-color: #141414;
+    margin: 0px;
+    overflow: hidden;
+
+}
+.BackgroundImage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter:blur(10px);
+    opacity: 0.8;
+
+}
+.topHr{
+    position: absolute;
+    width: 250px;
+    opacity: 0.3;
+
+}
+.bigCard{
+    position: relative;
+    height: 600px;
+    width: 400px;
+    justify-content: center;
+    margin: auto;
+    background-color: #333333;
+    border-radius: 400px;
+    opacity: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    transform: translateY(120px) ;
+    animation: BigCardAnimation 1.5s ease forwards;
+    animation-delay: 0.1s;
+    z-index: 0;
+
+}
+@keyframes BigCardAnimation {
+    from{
+        pacity: 0;
+        transform: translateY(240px) ;
+    }
+    to{
+        opacity: 0.3;
+        transform: translateY(120px) ;
+    }
+
+
+}
+.overlay{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    border-bottom-left-radius: 00px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    transform: translateX(860px) translateY(180px);
+    z-index: 1;
+    background-color: #333333;
+    opacity: 0.3;
+}
+.registerImage{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    transform: translateX(155px) translateY(40px);
+    opacity: 0.9;
+}
+.HeadingDivRelative{
+    height: 600px;
+    width: 400px;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    transform: translateY(-400px) ;
+
+}
+.headingDiv{
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    justify-content: center;
+    background-color: #141414;
+    border-radius: 100px;
+    transform: translateX(80px);
+    opacity: 0.7;
+    box-shadow: 0px 3px black;
+}
+.Heading{
+
+
+}
+
+.HrefRegister{
+
+    text-decoration: none;
+    position: absolute;
+    transform: translateX(65px) translateY(0px) translateY(-25px);
+    font-family: Consolas;
+    opacity: 0.4;
+    font-size: 40px;
+    color: #ffffff;
+
+}
+
+.Arrow{
+    position: absolute;
+    transform: scale(1.1)  translateX(110px) translateY(-26px);
+}
+
+.HrefText{
+    position: relative;
+    transform: scale(1);
+}
+
+.HrefText:hover
+.Arrow {
+    animation: ArrowAnimation 0.3s ease forwards;
+}
+
+
+@keyframes ArrowAnimation {
+    from{
+        transform: scale(1.1) translateX(110px) translateY(-25px);
+    }
+    to
+    {
+        transform: scale(1.1) translateX(115px) translateY(-25px);
+    }
+
+
+}
+.smallCard{
+    height: 50px;
+    width: 250px;
+    justify-content: center;
+    margin: auto;
+    transform: translateY(200px);
+
+}
+
+.input1{
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #141414;
+    opacity: 0;
+    box-shadow: 0px 3px black;
+    color: white;
+    font-size: 15px;
+    font-family: Consolas;
+    transform: translateY(-20px);
+    animation: AppearencePlaceholders1 0.8s ease forwards;
+    animation-delay: 0.5s;
+}
+.input2{
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #141414;
+    opacity: 0;
+    box-shadow: 0px 3px black;
+     color: white;
+    font-size: 15px;
+    font-family: Consolas;
+    animation: AppearencePlaceholders2 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.Submit{
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    opacity: 0;
+    justify-content: center;
+    margin: auto;
+    transform: translateX(80px) translateY(40px);
+    font-family: Consolas;
+    animation: AppearenceSubmit 0.8s ease forwards;
+    animation-delay: 1.2s;
+
+}
+
+
+
+@keyframes AppearencePlaceholders1 {
+
+    from{
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+  to{
+      opacity: 0.5;
+      transform: translateY(-20px);
+  }
+}
+@keyframes AppearencePlaceholders2 {
+
+     from{
+         opacity: 0;
+         transform: translateY(-100px);
+     }
+     to{
+         opacity: 0.5;
+         transform: translateY(0px);
+     }
+ }
+
+@keyframes AppearenceSubmit{
+
+    from{
+        opacity: 0;
+        transform: translateX(80px) translateY(-40px);
+    }
+    to{
+        opacity: 0.7;
+        transform: translateX(80px) translateY(40px);
+    }
+}
+
+
+

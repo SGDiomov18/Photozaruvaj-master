@@ -1,0 +1,301 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+
+body {
+    display:flex;
+    height: 100vh;
+    background-color: rgb(20,20,20);
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+div.container
+{
+    position: absolute;
+    bottom: 85%;
+
+
+}
+
+
+
+div.container a
+{
+    color: #c5c4c4;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: Asap;
+    margin: 0px 10px;
+    padding: 10px 30px;
+    position: relative;
+    cursor: pointer;
+
+
+}
+.HomeDiv{
+
+    position: absolute;
+    transform: translateX(-80px) scale(0.08);
+    top: -240px;
+    left: -210px;
+    opacity: 0.03;
+
+}
+.ShopDiv{
+    position: absolute;
+    transform: translateX(50px) scale(0.08);
+    top: -240px;
+    left: -300px;
+    opacity: 0.03;
+}
+.AboutDiv{
+    position: absolute;
+    transform: translateX(180px) scale(0.08);
+    left: -390px;
+    top: -240px;
+    opacity:0.03;
+}
+.ContactDiv{
+    position: absolute;
+    transform: translateX(310px) scale(0.1);
+    left: -480px;
+    top: -240px;
+    opacity:0.03;
+}
+
+.HomeDiv:hover{
+
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+.ShopDiv:hover{
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+.AboutDiv:hover{
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+.ContactDiv:hover{
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes NavBarAnimation {
+    from{
+        opacity: 0.03;
+
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+
+
+
+
+
+
+
+input{
+    overflow:hidden;
+    display: none
+}
+.topHr{
+    position: absolute;
+    bottom: 80%;
+    width: 450px;
+    opacity: 0.1;
+    border-color: #c5c4c4;
+    margin: auto;
+    animation: TopLineAnimation 1s ease-in-out forwards;
+
+}
+
+.bottomHr{
+    position: absolute;
+    top: 80%;
+    width: 450px;
+    opacity: 0.1;
+    border-color: #c5c4c4;
+    margin:auto;
+    animation: BottomLineAnimation 1s ease-in-out forwards;
+}
+
+@keyframes TopLineAnimation {
+    from{
+        transform: translateX(1500px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes BottomLineAnimation {
+    from{
+        transform: translateX(-1500px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    gap: 70px;
+    width: calc(100% - 20px);
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-200px) scale(0.7);
+    animation: CardAppearence 1.5s ease forwards;
+    z-index: 1;
+}
+
+
+
+.card{
+    height: 250px;
+    width: 250px;
+    background-color: rgba(255,255,255, 0.02);
+    border: 1px solid rgba(255,255,255, 0.05);
+    border-radius: 500px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+
+
+}
+
+@keyframes CardAppearence {
+    from{
+        opacity: 0;
+        transform: translateY(-200px) scale(0.7);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) scale(0.7);
+    }
+}
+
+
+
+.Plane{
+
+    transform: scale(0.49) rotate(90deg);
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+
+}
+.Chat{
+    transform: scale(0.49);
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+}
+.User{
+    position: relative;
+    transform: scale(0.49);
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+}
+
+
+.card:hover{
+    animation: cardAnimation 0.2s forwards;
+    opacity: 1;
+
+}
+
+
+@keyframes cardAnimation {
+    from{
+        transform: scale(1);
+        background-color: rgba(255,255,255, 0.02);
+        border: 1px solid rgba(255,255,255, 0.05);
+
+    }
+    to{
+        transform: scale(1.1);
+        background-color: rgb(183, 157, 238);
+        border: 1px solid rgba(255,255,255, 0.09);
+
+    }
+
+}
+.Plane:hover{
+    animation: PlaneImage 0.7s forwards;
+
+}
+
+@keyframes PlaneImage {
+    from{
+        transform: translateY(0px) scale(0.59) rotate(90deg);
+    }
+    to{
+        transform: translateY(20px) scale(0.59) rotate(90deg);
+    }
+}
+.Chat:hover{
+    animation: ChatImage 0.7s forwards;
+}
+
+@keyframes ChatImage {
+    from{
+        transform: scale(0.49) ;
+    }
+    to{
+        transform: scale(0.59);
+    }
+}
+
+.User:hover{
+    animation: UserImage 0.8s;
+}
+
+@keyframes UserImage {
+    from{
+        transform: scale(0.49) ;
+    }
+    to{
+        transform: scale(0.56);
+    }
+}
+
+@keyframes HiddenTextAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 0.7;
+        transform: translateY(0px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
