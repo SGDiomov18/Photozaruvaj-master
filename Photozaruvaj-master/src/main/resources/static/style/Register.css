@@ -206,7 +206,7 @@ body{
     text-align: center;
     background-color: #141414;
     opacity: 0;
-    box-shadow: 0px 3px black;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.98);
     color: rgba(255, 255, 255, 0.51);
     font-size: 17px;
     font-family: Consolas;
@@ -215,6 +215,7 @@ body{
 }
 
 .Submit{
+    border:white;
     height: 40px;
     width: 100px;
     border-radius: 50px;
@@ -225,9 +226,17 @@ body{
     font-family: Consolas;
     animation: AppearenceSubmit 1s ease forwards;
     animation-delay: 0.8s;
+    background-color: rgb(227, 227, 227);
+    transition: 0.4s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.56);
+
 
 }
+.Submit:hover{
 
+    background-color: rgba(5, 150, 180, 0.44);
+    color: white;
+}
 .HrefLink{
     height: 40px;
     width: 100px;
@@ -300,21 +309,23 @@ body{
     transform: translateX(9px);
     animation: backImageMainAnimation 1s ease forwards;
     animation-delay: 1.4s;
-
+    transition: 0.2s;
 }
 
 .backImage:hover{
     animation: backImageAnimation 1s ease forwards;
-    transform: translateX(9px);
+    transition: 0.2s;
 }
+
+
 @keyframes backImageAnimation {
     from{
         opacity: 0.03;
-        transform: translateX(9px);
+
     }
     to{
         opacity: 0.5;
-        transform: translateX(9px);
+
     }
 }
 

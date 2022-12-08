@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  dir="ltr"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style/Login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<!-- <video autoplay muted src = "./vid/Canon-MP4.mp4"></video> -->
+<img src = "../img/Beer.jpg" class = "BackgroundImage">
+
+<div class = "bigCard">
+
+</div>
+
+
+<div class ="HeadingDivRelative">
+    <div class="overlay">
+    <img src ='../img/CEO.png' class ="registerImage">
+
+    </div>
+
+    <div class = "smallCard"> <hr class = "topHr"></div>
+
+    <form method="post" th:action="@{/index}" th:object="${user}">
+
+    <div class = "smallCard">
+        <input  type="text" required placeholder="Username" class = "input1" th:field="*{username}" >
+    </div>
+
+    <div class = "smallCard">
+        <input type="password" required placeholder="Password" class = "input2" th:field="" >
+
+    </div>
+
+    </form>
+    <div class = "footerCard">
+        <button class = "Submit" type="submit">Enter</button>
+        <button class = "HrefLink"><a href = "Register.html" ></a>Register</button>
+    </div>
+
+</div>
+
+
+</body>
+</html>
